@@ -13,7 +13,7 @@
                     <div class="feature-box">
                         <div class="icon-support"></div>
                         <div class="content-blocks">call 
-                        +1 800 789 0000</div>
+                        +880 1914090747</div>
                     </div>
                 </li>
                 <li>
