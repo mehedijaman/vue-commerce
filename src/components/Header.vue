@@ -1,18 +1,17 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-// import { ref, onBeforeMount } from 'vue';
-// import axios from 'axios';
+import ApiService from '../Service/ApiService';
+import {ref, reactive, onBeforeMount} from 'vue';
 
-// let categories = ref([]);
+const categories = reactive([]);
 
-// onBeforeMount(() => {
-//    getCategories();
-// })
+onBeforeMount(() => {
+  getCategories();
+})
 
-// async function getCategories(){
-//     let res = await axios.get('https://dummyjson.com/products/categories');
-//     categories.value = res.data.replace('-', ' ');
-// }
+async function getCategories(){
+  Object.assign(categories,  await ApiService.getCategories());  
+}
 </script>
 <template>
 <header class="header-style-1"> 
@@ -83,11 +82,8 @@ import { RouterLink } from 'vue-router';
                 <ul class="categories-filter animate-dropdown">
                   <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" >
-                      <li class="menu-header">Computer</li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
+                      <!-- <li class="menu-header">Computer</li> -->
+                      <li v-for="(category,index) in categories" :key="index" role="presentation"><a role="menuitem" tabindex="-1" href="category.html">{{ category }}</a></li>
                     </ul>
                   </li>
                 </ul>
