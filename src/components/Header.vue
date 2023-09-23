@@ -33,18 +33,16 @@ async function getCategories(){
         
         <div class="cnt-block">
           <ul class="list-unstyled list-inline">
-            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
+            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">BDT </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
+                <li><a href="#">BDT</a></li>
                 <li><a href="#">USD</a></li>
-                <li><a href="#">INR</a></li>
-                <li><a href="#">GBP</a></li>
               </ul>
             </li>
             <li class="dropdown dropdown-small lang"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">English</a></li>
-                <li><a href="#">French</a></li>
-                <li><a href="#">German</a></li>
+                <li><a href="#">Bangla</a></li>
               </ul>
             </li>
           </ul>
@@ -101,8 +99,8 @@ async function getCategories(){
           <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
             <div class="items-cart-inner">
               <div class="basket">
-              <div class="basket-item-count"><span class="count">2</span></div>
-              <div class="total-price-basket"> <span class="lbl">Shopping Cart</span> <span class="value">$4580</span> </div>
+              <div class="basket-item-count"><span class="count">0</span></div>
+              <div class="total-price-basket"> <span class="lbl">Shopping Cart</span> <span class="value">0 BDT</span> </div>
               </div>
             </div>
             </a>
